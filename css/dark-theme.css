@@ -1,0 +1,428 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    flex: auto;
+    background-color: #1d1d1d; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+h1{
+    font-size: 40px;
+    top: 20px;
+    position: relative;
+    color: #ffffff; /* Light heading color */
+}
+
+h2{
+    color: #8b8b8b; /* Darker heading color */
+    font-size: 28px;
+    top: -100px;
+    position: relative;
+}
+
+h3{
+    font-size: 16px;
+    position: relative;
+    top: 0px;
+    color: #8b8b8b; /* Darker heading color */
+}
+
+p{
+    position: relative;
+    color: #8b8b8b; /* Darker text color */
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: #ffffff; /* Light attribution color */
+}
+
+.attribution a {
+    color: #8b8b8b; /* Darker link color */
+}
+
+header{
+    display: inline-block;
+    width: 100%;
+    background-color: #2d2d2d; /* Dark header background color */
+    height: 280px;
+}
+
+hr{
+    display: none;
+}
+
+.color-toggle{
+    float: right;
+    top: -83px;
+    position: relative;
+    width: 180px;
+    display: flex;
+}
+
+.header-wrapper{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toggle{
+    color: #8b8b8b; /* Darker toggle color */
+    font-weight: bold;
+    font-size: 19px;
+    flex: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.switch{
+    position:relative ;
+    display: inline-block;
+    width: 70px;
+    height: 32px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: rotate(180deg);
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #8b8b8b; /* Darker slider background color */
+    background-image: none;
+    transition: 0.4s;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 6px;
+    bottom: 3px;
+    background-color: #2d2d2d; /* Dark slider color */
+    transition: 0.4s;
+    -webkit-transition: .4s;
+}
+
+input:checked +  .slider{
+    background-image: linear-gradient(to right , #3f95cd , #3eccbe);
+}
+
+.input:focus + .slider{
+    box-shadow: 0 0 1px #8b8b8b; /* Darker slider shadow color */
+}
+
+.input:checked + .slider:before{
+    transform: translateX(32px);
+    background-color: #ffffff; /* Light slider color */
+}
+
+.slider.round{
+    border-radius: 34px;
+}
+
+.slider.round::before{
+    border-radius: 50%;
+}
+
+.kdi-card{
+    background-color: #404040; /* Darker card background color */
+    height: 250px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.kpi-wrapper{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    top: -120px;
+    display: flex;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-top-facebook{
+    width: 300px;
+    height: 5px;
+    background-color: #007bff; /* Primary color for Facebook */
+    border-radius: 8px 8px 0 0;
+}
+
+.card-top-twitter{
+    width: 300px;
+    height: 5px;
+    background-color: #1da1f3; /* Primary color for Twitter */
+    border-radius: 8px 8px 0 0;
+}
+
+.card-top-instgram{
+    width: 300px;
+    height: 5px;
+    background-image: linear-gradient(to right , #ffbd67 , #e74f98 ); /* Gradient for Instagram */
+    border-radius: 8px 8px 0 0;
+}
+
+.card-top-youtube{
+    width: 300px;
+    height: 5px;
+    background-color: #ff0000; /* Primary color for YouTube */
+    border-radius: 8px 8px 0  0 ;
+}
+
+.kpi-card-top{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    padding-top: 20px;
+}
+
+.icons{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.handle{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.icons{
+    text-align: center;
+    padding-right: 10px;
+}
+
+.kpi{
+    text-align: center;
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.unit-of-mesure{
+    color: #8b8b8b; /* Darker unit of measure color */
+    font-weight:normal ;
+    letter-spacing: 6px;
+    text-align: center;
+    top: -20px;
+    position: relative;
+}
+
+.delta{
+    text-align: center;
+}
+
+.up{
+    color: #10bf66; /* Lighter green color for positive changes */
+    font-weight: bold;
+}
+
+.down{
+    color: #ff0000; /* Lighter red color for negative changes */
+    font-weight: bold;
+}
+
+.overview-header{
+    max-width: 1280px;
+    margin-left: auto ;
+    margin-right: auto;
+}
+
+.overview-wrapper{
+    justify-content: space-evenly;
+    flex-wrap:wrap ;
+    position: relative;
+    display: flex;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kpi-small{
+    width: 300px;
+    background: #404040; /* Darker small card background color */
+    margin:10px ;
+    height: 150px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1.3fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.overview-kpis{
+    align-content: space-evenly;
+    width: 100%;
+    position: relative;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    top: -110px;
+}
+
+.page-view{
+    padding-left: 40px;
+    color: #8b8b8b; /* Darker page view color */
+    padding-top: 34PX;
+    font-size: 16PX;
+}
+
+.logo{
+    padding-top:30px ;
+    padding-left: 20px;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.views{
+    padding-top: 5px;
+    padding-left: 40px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.movement{
+    padding-top: 25px;
+    text-align: right;
+    padding-right: 30px;  
+}
+
+@media (max-width: 1355px) {
+    h1 {
+        margin-left: 20px;        
+    }
+    h3 {
+        margin-left: 20px;
+    }
+    h2 {
+        margin-left: 20px;
+    }
+    .color-toggle {
+        margin-right: 20px;
+    }
+}
+
+/* #region Max width 700px*/
+@media (max-width: 700px) {
+    h1 {
+        margin-left: 20px; 
+        font-size: 29px;
+        transition: ease-in-out 0.5s;    
+        padding-right: 10px;   
+    }
+    .color-toggle {
+        top: 30px;
+        float: left;
+        width: 90%;
+        margin-left: 20px;
+    }
+    .kpi-wrapper {
+        top: -30px;
+        transition: ease-in-out 0.5s; 
+    }
+    hr {
+        display: block;
+        width: 90%;
+        top: 20px;
+        position: relative;
+    }
+    h3 {
+        top: 10px;
+    }
+    header {
+        background-color: #20222f; /* Dark header background color */
+        transition: ease-in-out 0.5s;
+    }
+    h2 {
+        top: 0px;
+        padding-bottom: 70px;
+        padding-left: 20px;
+    }
+    .overview-kpis {
+        top: -80px;
+    }
+}
+
+/* #region Max width 640px*/
+@media (max-width: 640px){
+    .kpi-card {
+        width: 350px;
+    }
+    .kpi-small {
+        width: 350px;
+    }
+    .card-top-facebook {
+        width: 350px;
+    }
+    .card-top-twitter {
+        width: 350px;
+    }
+    .card-top-instagram {
+        width: 350px;
+    }
+    .card-top-youtube {
+        width: 350px;
+    }
+}
+
+/* #region Dark Mode settings*/
+header {
+    background-color: #20222f; /* Dark header background color */
+}
+
+html, body {
+    background-color: #1d2029; /* Dark background color */
+}
+
+h1 {
+    color: white; /* Light heading color */
+}
+
+h2 {
+    color: white; /* Light heading color */
+}
+
+.kpi-card {
+    background: #252b43; /* Dark card background color */
+}
+
+.kpi-small {
+    background: #252b43; /* Dark card background color */
+}
+
+.kpi {
+    color: white; /* Light KPI color */
+}
+
+.views {
+    color: white; /* Light view color */
+}
+
+p {
+    color: #8b8b8b; /* Darker text color */
+}
+
+.unit-of-measure {
+    color: #8b8b8b; /* Darker unit of measure color */
+}
+
+.page-views {
+    color: #8b8b8b; /* Darker page view color */
+}
+
+.attribution {
+    color: white; /* Light attribution color */
+}
